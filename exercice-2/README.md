@@ -1,7 +1,7 @@
-EXERCICE 2 : 
+# EXERCICE 2 : 
 
 
-Exercice 1 : 
+## Exercice 1 : 
 On crée le fichier init.sql puis on lance le service database 
 avec la commande suivante: docker compose up -d database
 
@@ -11,7 +11,7 @@ Résultat ci-dessous:
 
 
 
-Exercice 2 : 
+## Exercice 2 : 
 La commande à éxecuter pour ouvrir un processus bash interactif est
 la commande : docker compose exec database bash
 
@@ -22,13 +22,13 @@ que son contenu initial.
 ![docker 3](https://github.com/user-attachments/assets/bae0d632-17b3-42de-bb2c-e627a3ccd675)
 
 
-Exercice 3 : 
+## Exercice 3 : 
 Voici la commande utilisée pour cette exercice: 
 
 docker compose exec database mysqldump --no-tablespaces -u db_client -p"password" docker_doc_dev > dump.sql
 
 
-Exercice 4 : Pour associer un volume permettant de persister les données sur le disque 
+## Exercice 4 : Pour associer un volume permettant de persister les données sur le disque 
 voici les lignes rajouter au fichier docker-compose.yml:
 
 volumes:
@@ -37,7 +37,7 @@ volumes:
 
 
 
-Exercice 5 : Pour afficher les données de la table article j'ai crée un fichier index.php
+## Exercice 5 : Pour afficher les données de la table article j'ai crée un fichier index.php
 
 Puis pour pour lancer l'image on effectue les commandes suivantes: 
 
@@ -50,12 +50,12 @@ http://localhost:8080
 
 
 
-Exercice 6 : 
+## Exercice 6 : 
 La command epour relancer le projet après modification des sources :
 
 docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
 
-Exercice 7 :
+## Exercice 7 :
 Voici les deux commandes pour dev et prod : 
 
 docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
@@ -64,7 +64,7 @@ docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
 
 Fermer le docker et Faire un : sudo rm -rf ./data/* avant de lancer la deuxieme commande prod
 
-Exercice 8 : Est-ce une bonne pratique de placer des données sensibles (password, clés secrètes, etc.) dans des variables d’environnement comme on le fait ici ? Pourquoi ? Quelle autre option mise à disposition
+## Exercice 8 : Est-ce une bonne pratique de placer des données sensibles (password, clés secrètes, etc.) dans des variables d’environnement comme on le fait ici ? Pourquoi ? Quelle autre option mise à disposition
 par Docker faut-il privilégier pour le faire et pourquoi ?
 
 
