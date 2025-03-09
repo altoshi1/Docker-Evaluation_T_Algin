@@ -71,8 +71,7 @@ Résultat: Dev image 1 | Prod image 2
 ![Sans titre](https://github.com/user-attachments/assets/b18ec578-abdb-4073-9bb9-3a3134a5b92b)
 
 
-## Exercice 8 : Est-ce une bonne pratique de placer des données sensibles (password, clés secrètes, etc.) dans des variables d’environnement comme on le fait ici ? Pourquoi ? Quelle autre option mise à disposition
-par Docker faut-il privilégier pour le faire et pourquoi ?
+## Exercice 8 : Est-ce une bonne pratique de placer des données sensibles (password, clés secrètes, etc.) dans des variables d’environnement comme on le fait ici ? Pourquoi ? Quelle autre option mise à disposition par Docker faut-il privilégier pour le faire et pourquoi ?
 
 
 Non il n'est pas conseillé de placer des données sensible dans des variables d'environnement 
