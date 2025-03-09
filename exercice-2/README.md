@@ -23,5 +23,63 @@ que son contenu initial.
 
 
 Exercice 3 : 
-Voici la commande utiliser pour cette exercice: 
+Voici la commande utilisée pour cette exercice: 
+
 docker compose exec database mysqldump --no-tablespaces -u db_client -p"password" docker_doc_dev > dump.sql
+
+
+Exercice 4 : Pour associer un volume permettant de persister les données sur le disque 
+voici les lignes rajouter au fichier docker-compose.yml:
+
+volumes:
+      - ./data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+
+
+Exercice 5 : Pour afficher les données de la table article j'ai crée un fichier index.php
+
+Puis pour pour lancer l'image on effectue les commandes suivantes: 
+
+docker compose build
+
+docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+
+Et enfin affichage des résultats sur localhost via le port 80:
+http://localhost:8080
+
+
+
+Exercice 6 : 
+La command epour relancer le projet après modification des sources :
+
+docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+
+Exercice 7 :
+Voici les deux commandes pour dev et prod : 
+
+docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
+
+docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+
+Fermer le docker et Faire un : sudo rm -rf ./data/* avant de lancer la deuxieme commande prod
+
+Exercice 8 : Est-ce une bonne pratique de placer des données sensibles (password, clés secrètes, etc.) dans des variables d’environnement comme on le fait ici ? Pourquoi ? Quelle autre option mise à disposition
+par Docker faut-il privilégier pour le faire et pourquoi ?
+
+
+Non il n'est pas conseillé de placer des données sensible dans des variables d'environnement 
+car ce serait risqué au niveau de la sécurité 
+
+le variable d'environnement pouvant être inspecter via docker inspect
+et le données peuvent être visible en clair dans les logs 
+
+La solution que je recommande serait d'utiliser docker secrets qui est un outils mis en place par docker pour chiffrer automatiquement les données pour les éxposer uniquement aux conteneurs autorisés 
+
+
+
+
+
+
+
+
