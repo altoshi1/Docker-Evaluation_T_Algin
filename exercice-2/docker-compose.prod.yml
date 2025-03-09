@@ -1,0 +1,15 @@
+services:
+  database:
+    environment:
+      MYSQL_ROOT_PASSWORD: a-strong-password
+      MYSQL_USER: db_client
+      MYSQL_PASSWORD: another-strong-password
+      MYSQL_DATABASE: docker_doc
+
+  client:
+    environment:
+      MYSQL_USER: db_client
+      MYSQL_PASSWORD: another-strong-password
+      MYSQL_DATABASE: docker_doc
+      APP_ENV: prod
+
