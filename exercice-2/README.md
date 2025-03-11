@@ -77,7 +77,7 @@ Résultat: Dev image 1 | Prod image 2
 Non il n'est pas conseillé de placer des données sensible dans des variables d'environnement 
 car ce serait risqué au niveau de la sécurité 
 
-le variable d'environnement pouvant être inspecter via docker inspect
+la variable d'environnement pouvant être inspectée via docker inspect
 et le données peuvent être visible en clair dans les logs 
 
 La solution que je recommande serait d'utiliser docker secrets qui est un outils mis en place par docker pour chiffrer automatiquement les données pour les éxposer uniquement aux conteneurs autorisés 
