@@ -29,7 +29,7 @@ Voici la commande utilisée pour cette exercice:
 
 
 ## Exercice 4 : Pour associer un volume permettant de persister les données sur le disque 
-Voici les lignes rajouter au fichier docker-compose.yml:
+Voici les lignes à rajouter au fichier docker-compose.yml:
 
 volumes:
     `  - ./data:/var/lib/mysql `
