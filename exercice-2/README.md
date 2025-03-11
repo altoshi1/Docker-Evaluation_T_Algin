@@ -2,7 +2,7 @@
 
 
 ## Exercice 1 : 
-On crée le fichier `init.sql` puis on lance le service database 
+Pour cet exercice on crée le fichier `init.sql` puis on lance le service database 
 avec la commande suivante: `docker compose up -d database`
 
 Résultat ci-dessous:
@@ -29,7 +29,7 @@ Voici la commande utilisée pour cette exercice:
 
 
 ## Exercice 4 : Pour associer un volume permettant de persister les données sur le disque 
-voici les lignes rajouter au fichier docker-compose.yml:
+Voici les lignes rajouter au fichier docker-compose.yml:
 
 volumes:
     `  - ./data:/var/lib/mysql `
@@ -52,7 +52,7 @@ Et enfin affichage des résultats sur localhost via le port 80:
 
 
 ## Exercice 6 : 
-La command epour relancer le projet après modification des sources :
+La commande pour relancer le projet après modification des sources :
 
 `docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d`
 
